@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="roth.css">
+	<title></title>
+</head>
+<body>
+	<div class="group">
+		<h3>How old are now?</h3>
+		<input name="currentAge" id="currentAge" value="25">
+	</div>
+	<div class="group">
+		<h3>How old are now?</h3>
+		<input name="retirementAge" id="retirementAge" value="65">
+	</div>
+	<div class="group">
+		<h3>What is your expected rate of return (yearly)</h3>
+		<input name="rateOfReturn" id="rateOfReturn" value="07">
+	</div>
+	<div class="group">
+		<h3>How much do you have in your Roth IRA now?</h3>
+		<input name="initialInvestmentAmount" id="initialInvestmentAmount" value="0">
+	</div>
+<!-- 	<div class="group">
+		<h3>How much do you plan on adding to your Roth IRA every year?</h3>
+		<input name="annualContributionAmount" id="annualContributionAmount" value="5500">
+	</div>  -->
+	<div class="range-slider group">
+		<h3>How much do you plan on adding to your Roth IRA every year?</h3>
+		<input class="input-range" type="range" min="0" value="500" max="5500" name="annualContributionAmount" id="annualContributionAmount">
+		<span class="range-value"></span>
+	</div>
+	<div>
+		<button id="btnNext" type="submit">Next</button>
+	</div>
+
+
+    <button class="retire" onclick="retire(
+    			document.getElementById('currentAge').value,
+    			document.getElementById('retirementAge').value,
+    			document.getElementById('rateOfReturn').value,
+    			document.getElementById('initialInvestmentAmount').value,
+    			document.getElementById('annualContributionAmount').value
+    		)">Retire</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>		
+	<script type="text/javascript" src="roth.js"></script>
+</body>
+</html>
